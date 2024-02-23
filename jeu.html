@@ -1,9 +1,3 @@
-<IfModule mod_headers.c>
-    <Directory "https://sae-6-1-final.vercel.app">
-        Header set Cross-Origin-Embedder-Policy "require-corp"
-        Header set Cross-Origin-Opener-Policy "same-origin"
-    </Directory>
-</IfModule>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -119,7 +113,10 @@ body {
 		<link id='-gd-engine-icon' rel='icon' type='image/png' href='index.icon.png' />
 <link rel='apple-touch-icon' href='index.apple-touch-icon.png'/>
 
-	</head>
+	 <!-- En-têtes pour Cross Origin Isolation et SharedArrayBuffer -->
+	 <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+	 <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+ </head>
 	<body>
 		<canvas id="canvas">
 			HTML5 canvas appears to be unsupported in the current browser.<br >
