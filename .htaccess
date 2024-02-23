@@ -1,6 +1,13 @@
-<IfModule mod_headers.c>
+<!-- <IfModule mod_headers.c>
     <Directory "https://sae-6-1-final.vercel.app">
         Header set Cross-Origin-Embedder-Policy "require-corp"
         Header set Cross-Origin-Opener-Policy "same-origin"
     </Directory>
+</IfModule> -->
+
+<IfModule mod_headers.c>
+    Header set Cross-Origin-Opener-Policy "same-origin"
+</IfModule>
+<IfModule mod_headers.c>
+    Header set Cross-Origin-Embedder-Policy "require-corp"
 </IfModule>
